@@ -52,7 +52,7 @@
             // 
             grpAbsences.Location = new Point(12, 230);
             grpAbsences.Name = "grpAbsences";
-            grpAbsences.Size = new Size(240, 131);
+            grpAbsences.Size = new Size(240, 144);
             grpAbsences.TabIndex = 1;
             grpAbsences.TabStop = false;
             grpAbsences.Text = "Absences";
@@ -115,7 +115,7 @@
             // 
             btnAfficherAbsences.Location = new Point(258, 329);
             btnAfficherAbsences.Name = "btnAfficherAbsences";
-            btnAfficherAbsences.Size = new Size(270, 32);
+            btnAfficherAbsences.Size = new Size(270, 45);
             btnAfficherAbsences.TabIndex = 8;
             btnAfficherAbsences.Text = "Afficher absences";
             btnAfficherAbsences.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 377);
+            ClientSize = new Size(535, 386);
             Controls.Add(btnAfficherAbsences);
             Controls.Add(btnSupprimerAbsence);
             Controls.Add(btnModifierAbsence);
