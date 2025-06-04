@@ -75,6 +75,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(187, 23);
             textBox3.TabIndex = 5;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // lblMDP
             // 

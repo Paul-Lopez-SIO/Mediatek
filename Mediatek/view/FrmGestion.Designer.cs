@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             grpPersonnel = new GroupBox();
             grpAbsences = new GroupBox();
             btnAjoutPersonnel = new Button();
@@ -37,10 +38,21 @@
             btnModifierAbsence = new Button();
             btnAjouterAbsence = new Button();
             btnAfficherAbsences = new Button();
+            dgvPersonnel = new DataGridView();
+            bddManagerBindingSource = new BindingSource(components);
+            bddManagerBindingSource1 = new BindingSource(components);
+            dgvAbsences = new DataGridView();
+            grpPersonnel.SuspendLayout();
+            grpAbsences.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPersonnel).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bddManagerBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bddManagerBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAbsences).BeginInit();
             SuspendLayout();
             // 
             // grpPersonnel
             // 
+            grpPersonnel.Controls.Add(dgvPersonnel);
             grpPersonnel.Location = new Point(12, 12);
             grpPersonnel.Name = "grpPersonnel";
             grpPersonnel.Size = new Size(516, 212);
@@ -50,6 +62,7 @@
             // 
             // grpAbsences
             // 
+            grpAbsences.Controls.Add(dgvAbsences);
             grpAbsences.Location = new Point(12, 230);
             grpAbsences.Name = "grpAbsences";
             grpAbsences.Size = new Size(240, 144);
@@ -120,6 +133,32 @@
             btnAfficherAbsences.Text = "Afficher absences";
             btnAfficherAbsences.UseVisualStyleBackColor = true;
             // 
+            // dgvPersonnel
+            // 
+            dgvPersonnel.AutoGenerateColumns = false;
+            dgvPersonnel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPersonnel.DataSource = bddManagerBindingSource;
+            dgvPersonnel.Location = new Point(6, 22);
+            dgvPersonnel.Name = "dgvPersonnel";
+            dgvPersonnel.Size = new Size(505, 184);
+            dgvPersonnel.TabIndex = 1;
+            // 
+            // bddManagerBindingSource
+            // 
+            bddManagerBindingSource.DataSource = typeof(habilitations2024.bddmanager.BddManager);
+            // 
+            // bddManagerBindingSource1
+            // 
+            bddManagerBindingSource1.DataSource = typeof(habilitations2024.bddmanager.BddManager);
+            // 
+            // dgvAbsences
+            // 
+            dgvAbsences.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAbsences.Location = new Point(6, 22);
+            dgvAbsences.Name = "dgvAbsences";
+            dgvAbsences.Size = new Size(228, 116);
+            dgvAbsences.TabIndex = 0;
+            // 
             // FrmGestion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +175,12 @@
             Controls.Add(grpPersonnel);
             Name = "FrmGestion";
             Text = "MediaTek86 - Gestion";
+            grpPersonnel.ResumeLayout(false);
+            grpAbsences.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvPersonnel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bddManagerBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bddManagerBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAbsences).EndInit();
             ResumeLayout(false);
         }
 
@@ -150,5 +195,9 @@
         private Button btnModifierAbsence;
         private Button btnAjouterAbsence;
         private Button btnAfficherAbsences;
+        private DataGridView dgvPersonnel;
+        private BindingSource bddManagerBindingSource;
+        private BindingSource bddManagerBindingSource1;
+        private DataGridView dgvAbsences;
     }
 }
