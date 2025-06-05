@@ -1,12 +1,5 @@
 ﻿
 using Mediatek.model;
-using Microsoft.VisualBasic.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using System.Threading.Tasks;
 
 namespace Mediatek.dal
 {
@@ -41,11 +34,11 @@ namespace Mediatek.dal
                 };
                 string req = "select * from responsable";
                 req += " where login = @login and pwd = SHA2(@pwd, 256);";
-                    List<Object[]> records = access.Manager.ReqSelect(req, parameters);
-                    if (records != null)
-                    {
-                        return (records.Count > 0);
-                    }
+                List<Object[]> records = access.Manager.ReqSelect(req, parameters);
+                if (records != null)
+                {
+                    return (records.Count > 0);
+                }
 
             }
             return false;

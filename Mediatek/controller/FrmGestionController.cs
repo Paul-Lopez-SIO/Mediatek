@@ -1,11 +1,5 @@
 ﻿using Mediatek.dal;
 using Mediatek.model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mediatek.controller
 {
@@ -102,7 +96,7 @@ namespace Mediatek.controller
         /// <param name="absence"></param>
         public void UpdateAbsence(Absence nouvelleAbsence, Absence ancienneAbsence)
         {
-            accessAbsence.UpdateAbsence( nouvelleAbsence,  ancienneAbsence);
+            accessAbsence.UpdateAbsence(nouvelleAbsence, ancienneAbsence);
         }
         /// <summary>
         /// Demande de suppression d'une absence
@@ -110,7 +104,7 @@ namespace Mediatek.controller
         /// <param name="absence">Objet absence à supprimer</param>
         public void DelAbsence(Absence absence)
         {
-            accessAbsence.DelAbsence( absence);
+            accessAbsence.DelAbsence(absence);
         }
     }
 }

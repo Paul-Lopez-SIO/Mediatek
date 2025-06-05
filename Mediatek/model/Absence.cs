@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mediatek.model
+﻿namespace Mediatek.model
 {
     public class Absence
     {
@@ -15,7 +9,7 @@ namespace Mediatek.model
         public DateTime DateFin { get; set; }
 
         public int IdMotif { get; set; }
-        public string Motif {  get; set; }
+        public string Motif { get; set; }
 
         /// <summary>
         /// Constructeur de la classe Absence.

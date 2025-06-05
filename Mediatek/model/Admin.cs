@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mediatek.model
+﻿namespace Mediatek.model
 {
     /// <summary>
     /// Classe métier interne qui mémorise les données de connexion (nom, prénom, mot de passe).
