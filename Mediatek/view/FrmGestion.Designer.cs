@@ -51,14 +51,14 @@
             txtboxPrenom = new TextBox();
             txtboxNom = new TextBox();
             groupBox2 = new GroupBox();
+            dtpFin = new DateTimePicker();
+            dtpDebut = new DateTimePicker();
             btnAbsencesSupprimer = new Button();
             btnAbsencesModifier = new Button();
             btnAbsenceAjout = new Button();
             lblMotif = new Label();
-            txtboxFin = new TextBox();
             cmbMotif = new ComboBox();
             lblDateFin = new Label();
-            txtboxDebut = new TextBox();
             lblDateDebut = new Label();
             grpPersonnel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPersonnel).BeginInit();
@@ -75,7 +75,7 @@
             grpPersonnel.Controls.Add(dgvPersonnel);
             grpPersonnel.Location = new Point(12, 12);
             grpPersonnel.Name = "grpPersonnel";
-            grpPersonnel.Size = new Size(567, 212);
+            grpPersonnel.Size = new Size(673, 212);
             grpPersonnel.TabIndex = 0;
             grpPersonnel.TabStop = false;
             grpPersonnel.Text = "Personnel";
@@ -85,7 +85,7 @@
             dgvPersonnel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPersonnel.Location = new Point(6, 22);
             dgvPersonnel.Name = "dgvPersonnel";
-            dgvPersonnel.Size = new Size(555, 184);
+            dgvPersonnel.Size = new Size(661, 184);
             dgvPersonnel.TabIndex = 0;
             dgvPersonnel.SelectionChanged += dgvPersonnel_SelectionChanged;
             // 
@@ -99,7 +99,7 @@
             grpAbsences.Controls.Add(btnAfficherAbsences);
             grpAbsences.Location = new Point(12, 230);
             grpAbsences.Name = "grpAbsences";
-            grpAbsences.Size = new Size(240, 313);
+            grpAbsences.Size = new Size(346, 340);
             grpAbsences.TabIndex = 1;
             grpAbsences.TabStop = false;
             grpAbsences.Text = "Absences";
@@ -109,17 +109,18 @@
             dgvAbsences.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAbsences.Location = new Point(6, 22);
             dgvAbsences.Name = "dgvAbsences";
-            dgvAbsences.Size = new Size(228, 252);
+            dgvAbsences.Size = new Size(334, 278);
             dgvAbsences.TabIndex = 0;
             // 
             // btnAfficherAbsences
             // 
-            btnAfficherAbsences.Location = new Point(6, 280);
+            btnAfficherAbsences.Location = new Point(6, 306);
             btnAfficherAbsences.Name = "btnAfficherAbsences";
-            btnAfficherAbsences.Size = new Size(228, 27);
+            btnAfficherAbsences.Size = new Size(334, 27);
             btnAfficherAbsences.TabIndex = 8;
             btnAfficherAbsences.Text = "Afficher absences";
             btnAfficherAbsences.UseVisualStyleBackColor = true;
+            btnAfficherAbsences.Click += btnAfficherAbsences_Click;
             // 
             // bddManagerBindingSource1
             // 
@@ -140,7 +141,7 @@
             groupBox1.Controls.Add(lblNom);
             groupBox1.Controls.Add(txtboxPrenom);
             groupBox1.Controls.Add(txtboxNom);
-            groupBox1.Location = new Point(258, 230);
+            groupBox1.Location = new Point(364, 230);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(321, 164);
             groupBox1.TabIndex = 9;
@@ -260,69 +261,79 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(dtpFin);
+            groupBox2.Controls.Add(dtpDebut);
             groupBox2.Controls.Add(btnAbsencesSupprimer);
             groupBox2.Controls.Add(btnAbsencesModifier);
             groupBox2.Controls.Add(btnAbsenceAjout);
             groupBox2.Controls.Add(lblMotif);
-            groupBox2.Controls.Add(txtboxFin);
             groupBox2.Controls.Add(cmbMotif);
             groupBox2.Controls.Add(lblDateFin);
-            groupBox2.Controls.Add(txtboxDebut);
             groupBox2.Controls.Add(lblDateDebut);
-            groupBox2.Location = new Point(258, 400);
+            groupBox2.Location = new Point(364, 400);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(321, 143);
+            groupBox2.Size = new Size(321, 170);
             groupBox2.TabIndex = 10;
             groupBox2.TabStop = false;
             groupBox2.Text = "Gestion absences";
             // 
+            // dtpFin
+            // 
+            dtpFin.Location = new Point(49, 66);
+            dtpFin.Name = "dtpFin";
+            dtpFin.Size = new Size(200, 23);
+            dtpFin.TabIndex = 19;
+            // 
+            // dtpDebut
+            // 
+            dtpDebut.Location = new Point(49, 31);
+            dtpDebut.Name = "dtpDebut";
+            dtpDebut.Size = new Size(200, 23);
+            dtpDebut.TabIndex = 18;
+            // 
             // btnAbsencesSupprimer
             // 
-            btnAbsencesSupprimer.Location = new Point(220, 110);
+            btnAbsencesSupprimer.Location = new Point(220, 139);
             btnAbsencesSupprimer.Name = "btnAbsencesSupprimer";
             btnAbsencesSupprimer.Size = new Size(96, 23);
             btnAbsencesSupprimer.TabIndex = 17;
             btnAbsencesSupprimer.Text = "Supprimer";
             btnAbsencesSupprimer.UseVisualStyleBackColor = true;
+            btnAbsencesSupprimer.Click += btnAbsencesSupprimer_Click;
             // 
             // btnAbsencesModifier
             // 
-            btnAbsencesModifier.Location = new Point(113, 110);
+            btnAbsencesModifier.Location = new Point(113, 139);
             btnAbsencesModifier.Name = "btnAbsencesModifier";
             btnAbsencesModifier.Size = new Size(96, 23);
             btnAbsencesModifier.TabIndex = 16;
             btnAbsencesModifier.Text = "Modifier";
             btnAbsencesModifier.UseVisualStyleBackColor = true;
+            btnAbsencesModifier.Click += btnAbsencesModifier_Click;
             // 
             // btnAbsenceAjout
             // 
-            btnAbsenceAjout.Location = new Point(6, 110);
+            btnAbsenceAjout.Location = new Point(6, 139);
             btnAbsenceAjout.Name = "btnAbsenceAjout";
             btnAbsenceAjout.Size = new Size(96, 23);
             btnAbsenceAjout.TabIndex = 15;
             btnAbsenceAjout.Text = "Ajouter";
             btnAbsenceAjout.UseVisualStyleBackColor = true;
+            btnAbsenceAjout.Click += btnAbsenceAjout_Click;
             // 
             // lblMotif
             // 
             lblMotif.AutoSize = true;
-            lblMotif.Location = new Point(163, 72);
+            lblMotif.Location = new Point(8, 105);
             lblMotif.Name = "lblMotif";
             lblMotif.Size = new Size(36, 15);
             lblMotif.TabIndex = 11;
             lblMotif.Text = "Motif";
             // 
-            // txtboxFin
-            // 
-            txtboxFin.Location = new Point(215, 30);
-            txtboxFin.Name = "txtboxFin";
-            txtboxFin.Size = new Size(100, 23);
-            txtboxFin.TabIndex = 12;
-            // 
             // cmbMotif
             // 
             cmbMotif.FormattingEnabled = true;
-            cmbMotif.Location = new Point(215, 69);
+            cmbMotif.Location = new Point(49, 102);
             cmbMotif.Name = "cmbMotif";
             cmbMotif.Size = new Size(100, 23);
             cmbMotif.TabIndex = 10;
@@ -330,18 +341,11 @@
             // lblDateFin
             // 
             lblDateFin.AutoSize = true;
-            lblDateFin.Location = new Point(181, 35);
+            lblDateFin.Location = new Point(15, 69);
             lblDateFin.Name = "lblDateFin";
             lblDateFin.Size = new Size(23, 15);
             lblDateFin.TabIndex = 14;
             lblDateFin.Text = "Fin";
-            // 
-            // txtboxDebut
-            // 
-            txtboxDebut.Location = new Point(49, 30);
-            txtboxDebut.Name = "txtboxDebut";
-            txtboxDebut.Size = new Size(100, 23);
-            txtboxDebut.TabIndex = 10;
             // 
             // lblDateDebut
             // 
@@ -356,13 +360,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(594, 555);
+            ClientSize = new Size(697, 582);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(grpAbsences);
             Controls.Add(grpPersonnel);
             Name = "FrmGestion";
-            Text = "MediaTek86 - Gestion";
             grpPersonnel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPersonnel).EndInit();
             ((System.ComponentModel.ISupportInitialize)bddManagerBindingSource).EndInit();
@@ -397,9 +400,7 @@
         private TextBox txtboxTel;
         private Label lblService;
         private ComboBox cmbService;
-        private TextBox txtboxFin;
         private Label lblDateFin;
-        private TextBox txtboxDebut;
         private Label lblDateDebut;
         private Label lblMotif;
         private ComboBox cmbMotif;
@@ -409,5 +410,7 @@
         private Button btnPersonnelSupprimer;
         private Button btnPersonnelModifier;
         private Button btnPersonnelAjout;
+        private DateTimePicker dtpDebut;
+        private DateTimePicker dtpFin;
     }
 }

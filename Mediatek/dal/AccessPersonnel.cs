@@ -115,6 +115,28 @@ namespace Mediatek.dal
             return lesServices;
         }
         /// <summary>
+        /// récupère les motifs
+        /// </summary>
+        /// <returns>une liste des motifs</returns>
+        public List<Motif> GetLesMotifs()
+        {
+            List<Motif> lesMotifs = new List<Motif>();
+            if (access.Manager != null)
+            {
+                string req = "SELECT idmotif, libelle FROM motif;";
+                List<Object[]> records = access.Manager.ReqSelect(req);
+                if (records != null)
+                {
+                    foreach (Object[] record in records)
+                    {
+                        Motif motif = new Motif((int)record[0], (string)record[1]);
+                        lesMotifs.Add(motif);
+                    }
+                }
+            }
+            return lesMotifs;
+        }
+        /// <summary>
         /// Demande de suppression d'un personnel
         /// </summary>
         /// <param name="personnel">objet developpeur à supprimer</param>
