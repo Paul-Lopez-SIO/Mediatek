@@ -1,4 +1,4 @@
-﻿using habilitations2024.bddmanager;
+﻿using Mediatek.bddmanager;
 
 
 
@@ -12,7 +12,7 @@ namespace Mediatek.dal
         /// <summary>
         /// chaine de connexion à la bdd
         /// </summary>
-        private static readonly string connectionString = "server=localhost;user id=habilitations;password=motdepasseuser;database=habilitations;";
+        private static readonly string connectionString = "server=localhost;user id=admin;password=password;database=mediatek;";
         /// <summary>
         /// instance unique de la classe
         /// </summary>

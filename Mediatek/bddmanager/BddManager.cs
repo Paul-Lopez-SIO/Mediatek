@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace habilitations2024.bddmanager
+namespace Mediatek.bddmanager
 {
     /// <summary>
     /// Singleton : connexion à la base de données et exécution des requêtes

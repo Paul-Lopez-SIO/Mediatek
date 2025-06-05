@@ -11,8 +11,6 @@
 
   <ItemGroup>
     <Folder Include="bddmanager\" />
-    <Folder Include="controller\" />
-    <Folder Include="model\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -28,59 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblNom = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            lblPrenom = new Label();
-            textBox3 = new TextBox();
+            txtboxLogin = new TextBox();
+            lblLogin = new Label();
+            txtboxMdp = new TextBox();
             lblMDP = new Label();
             btnConnecter = new Button();
             SuspendLayout();
             // 
-            // lblNom
+            // txtboxLogin
             // 
-            lblNom.AutoSize = true;
-            lblNom.Location = new Point(7, 13);
-            lblNom.Name = "lblNom";
-            lblNom.Size = new Size(34, 15);
-            lblNom.TabIndex = 0;
-            lblNom.Text = "Nom";
+            txtboxLogin.Location = new Point(58, 12);
+            txtboxLogin.Name = "txtboxLogin";
+            txtboxLogin.Size = new Size(187, 23);
+            txtboxLogin.TabIndex = 3;
             // 
-            // textBox1
+            // lblLogin
             // 
-            textBox1.Location = new Point(60, 8);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(187, 23);
-            textBox1.TabIndex = 1;
+            lblLogin.AutoSize = true;
+            lblLogin.Location = new Point(5, 17);
+            lblLogin.Name = "lblLogin";
+            lblLogin.Size = new Size(37, 15);
+            lblLogin.TabIndex = 2;
+            lblLogin.Text = "Login";
             // 
-            // textBox2
+            // txtboxMdp
             // 
-            textBox2.Location = new Point(60, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(187, 23);
-            textBox2.TabIndex = 3;
-            // 
-            // lblPrenom
-            // 
-            lblPrenom.AutoSize = true;
-            lblPrenom.Location = new Point(7, 42);
-            lblPrenom.Name = "lblPrenom";
-            lblPrenom.Size = new Size(49, 15);
-            lblPrenom.TabIndex = 2;
-            lblPrenom.Text = "Prénom";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(60, 66);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(187, 23);
-            textBox3.TabIndex = 5;
-            textBox3.UseSystemPasswordChar = true;
+            txtboxMdp.Location = new Point(58, 41);
+            txtboxMdp.Name = "txtboxMdp";
+            txtboxMdp.Size = new Size(187, 23);
+            txtboxMdp.TabIndex = 5;
+            txtboxMdp.UseSystemPasswordChar = true;
             // 
             // lblMDP
             // 
             lblMDP.AutoSize = true;
-            lblMDP.Location = new Point(7, 71);
+            lblMDP.Location = new Point(5, 46);
             lblMDP.Name = "lblMDP";
             lblMDP.Size = new Size(32, 15);
             lblMDP.TabIndex = 4;
@@ -88,25 +70,24 @@
             // 
             // btnConnecter
             // 
-            btnConnecter.Location = new Point(148, 95);
+            btnConnecter.Location = new Point(148, 70);
             btnConnecter.Name = "btnConnecter";
             btnConnecter.Size = new Size(97, 23);
             btnConnecter.TabIndex = 6;
             btnConnecter.Text = "Se connecter";
             btnConnecter.UseVisualStyleBackColor = true;
+            btnConnecter.Click += btnConnecter_Click;
             // 
             // FrmConnexion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(257, 130);
+            ClientSize = new Size(257, 103);
             Controls.Add(btnConnecter);
-            Controls.Add(textBox3);
+            Controls.Add(txtboxMdp);
             Controls.Add(lblMDP);
-            Controls.Add(textBox2);
-            Controls.Add(lblPrenom);
-            Controls.Add(textBox1);
-            Controls.Add(lblNom);
+            Controls.Add(txtboxLogin);
+            Controls.Add(lblLogin);
             Name = "FrmConnexion";
             Text = "Connexion";
             ResumeLayout(false);
@@ -116,10 +97,10 @@
         #endregion
 
         private Label lblNom;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label lblPrenom;
-        private TextBox textBox3;
+        private TextBox txtboxNom;
+        private TextBox txtboxLogin;
+        private Label lblLogin;
+        private TextBox txtboxMdp;
         private Label lblMDP;
         private Button btnConnecter;
     }
